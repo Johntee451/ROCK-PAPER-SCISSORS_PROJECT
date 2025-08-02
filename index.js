@@ -5,7 +5,7 @@ function playGame() {
 
 
         let humanScore = 0;
-        let computerScore = 0
+        let computerScore = 0;
 
         let compChoice = Math.random();
         let humanChoice = parseInt(prompt("chose '1' for ROCK\nchose '2' for PAPER\nchose '3' for SCISSORS"));
@@ -23,7 +23,7 @@ function playGame() {
                 return "SCISSORS";
             }
             else{
-                return "Number Not Valid...!!!\nChoose Between [1][2][3]";
+                return alert("Number Not Valid...!!!\nChoose Between [1][2][3]");
             }
         }
 
@@ -62,6 +62,9 @@ function playGame() {
             }
             else if (humanChos === computerChoice) {
                 return "ITS A TIE..NO WINNER"
+            }
+            else if (humanChos === undefined /*|| humanChos === "undefined"*/ && computerChoice === "ROCK" || computerChoice === "PAPER" || computerChoice === "SCISSORS") {
+                return "GAME CANCELLED\nUSER SHOULD ENTER VALID NUMBER BETWEEN [1][2][3]"
             }
             else{
                 computerScore++;

@@ -63,7 +63,7 @@ function playGame() {
             else if (humanChos === computerChoice) {
                 return "ITS A TIE..NO WINNER"
             }
-            else if (humanChos === undefined /*|| humanChos === "undefined"*/ && computerChoice === "ROCK" || computerChoice === "PAPER" || computerChoice === "SCISSORS") {
+            else if (humanChos === undefined) {
                 return "GAME CANCELLED\nUSER SHOULD ENTER VALID NUMBER BETWEEN [1][2][3]"
             }
             else{

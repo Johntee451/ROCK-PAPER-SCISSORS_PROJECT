@@ -1,12 +1,11 @@
 function playGame() {
 
+
+    let humanScore = 0;
+    let computerScore = 0;
+
     
-    for (let i = 1; i <= 2; i++) {
-
-
-        let totalScore = 0;
-        let humanScore = 0;
-        let computerScore = 0;
+    for (let i = 1; i <= 5; i++) {
 
         let compChoice = Math.random();
         let humanChoice = parseInt(prompt("chose '1' for ROCK\nchose '2' for PAPER\nchose '3' for SCISSORS"));
@@ -50,18 +49,15 @@ function playGame() {
 
             if (humanChos === "ROCK" && computerChoice === "SCISSORS") {
                 humanScore++;
-                totalScore = totalScore + humanScore;
                 return "YOU WIN"
             }
 
             else if (humanChos === "SCISSORS" && computerChoice === "PAPER") {
                 humanScore++;
-                totalScore = totalScore + humanScore;
                 return "YOU WIN"
             }
             else if (humanChos === "PAPER" && computerChoice === "ROCK") {
                 humanScore++;
-                totalScore = totalScore + humanScore;
                 return "YOU WIN"
             }
             else if (humanChos === computerChoice) {
@@ -72,28 +68,59 @@ function playGame() {
             }
             else{
                 computerScore++;
-                totalScore = totalScore + computerScore;
                 return "COMPUTER WINS"
             }
 
-
-        }
-
-        function getGameScore() {
-            return "Computer score is: " + computerScore + "\nYour score is: " + humanScore;
         }
 
 
+        function getScoreUpdate() {
+            return "Your Score is: " + humanScore + "\nComputer Score is: " + computerScore;
+        }
 
+
+        console.log("\n\nYOU CHOOSE: " + getHumanChoice());
         console.log("COMPUTER CH0OSES: " + getComputerChoice());
-        console.log("YOU CHOOSE: " + getHumanChoice());
-
         console.log(playRound(getHumanChoice(), getComputerChoice()));
-        console.log(getGameScore());
-        //console.log(totalScore);
+        console.log(getScoreUpdate());
 
     }
 
     
+    function getComputerGameScore(){
+        return computerScore;
+    }
+
+    function getHumanGameScore(){
+        return humanScore;
+    }
+
+    
+    function getTotalGameScore(HumanGameScore, ComputerGameScore) {
+
+        if (HumanGameScore > ComputerGameScore) {
+            return(
+                "\nOVERALL WINNER IS YOU WITH " + humanScore + " POINTS" +
+                "\nFIRST RUNNER UP IS COMPUTER WITH " + computerScore + " POINTS"
+            );
+        }
+        else if (HumanGameScore < ComputerGameScore) {
+            return(
+                "\nOVERALL WINNER IS COMPUTER WITH " + computerScore + " POINTS" +
+                "\nFIRST RUNNER UP IS YOU WITH " + humanScore + " POINTS"
+            );
+        }
+        else {
+            return "\nNO OVERALL WINNER AND NO FIRST RUNNER UP";
+        }
+        
+    }
+    
+
+    console.log("\n\n\n\n\nYour final score: " + getHumanGameScore());
+    console.log("Computer final score: " + getComputerGameScore());
+    console.log(getTotalGameScore(getHumanGameScore(), getComputerGameScore()));
+
 }
+
 console.log(playGame());

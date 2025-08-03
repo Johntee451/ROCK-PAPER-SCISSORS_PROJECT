@@ -4,6 +4,7 @@ function playGame() {
     for (let i = 1; i <= 2; i++) {
 
 
+        let totalScore = 0;
         let humanScore = 0;
         let computerScore = 0;
 
@@ -49,15 +50,18 @@ function playGame() {
 
             if (humanChos === "ROCK" && computerChoice === "SCISSORS") {
                 humanScore++;
+                totalScore = totalScore + humanScore;
                 return "YOU WIN"
             }
 
             else if (humanChos === "SCISSORS" && computerChoice === "PAPER") {
                 humanScore++;
+                totalScore = totalScore + humanScore;
                 return "YOU WIN"
             }
             else if (humanChos === "PAPER" && computerChoice === "ROCK") {
                 humanScore++;
+                totalScore = totalScore + humanScore;
                 return "YOU WIN"
             }
             else if (humanChos === computerChoice) {
@@ -68,20 +72,28 @@ function playGame() {
             }
             else{
                 computerScore++;
+                totalScore = totalScore + computerScore;
                 return "COMPUTER WINS"
             }
+
+
         }
 
-        function gameScore() {
+        function getGameScore() {
             return "Computer score is: " + computerScore + "\nYour score is: " + humanScore;
         }
+
 
 
         console.log("COMPUTER CH0OSES: " + getComputerChoice());
         console.log("YOU CHOOSE: " + getHumanChoice());
 
         console.log(playRound(getHumanChoice(), getComputerChoice()));
-        console.log(gameScore());
+        console.log(getGameScore());
+        //console.log(totalScore);
+
     }
+
+    
 }
 console.log(playGame());

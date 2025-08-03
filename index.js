@@ -1,7 +1,7 @@
 function playGame() {
 
     
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 2; i++) {
 
 
         let humanScore = 0;
@@ -73,7 +73,7 @@ function playGame() {
         }
 
         function gameScore() {
-            return "Computer score is: " + humanScore + "\nYour score is: " + computerScore;
+            return "Computer score is: " + computerScore + "\nYour score is: " + humanScore;
         }
 
 

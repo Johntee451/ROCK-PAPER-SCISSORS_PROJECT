@@ -3,57 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I DON START AGAIN O</title>
-    <style>
-        h1{
-            font-size: 70px;
-            text-align: center;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        h2{
-            font-size: 45px;
-            text-align: center;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        h3{
-            font-size: 30px;
-            text-align: center;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        h4{
-            font-size: 20px;
-            text-align: center;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        h5{
-            font-size: 15px;
-            text-align: center;
-            font-family: sans-serif;
-        }
-        li{
-            list-style-type: none;
-        }
-        b{
-            font-size: 25px;
-        }
-    </style>
+    <title>Rock Paper Scissors</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>JOHNTEE'S GAME PAGE</h1>
-    <h2>JUST A LITTLE APPLICATION</h2>
-    <h3>(ROCK-PAPER-SCISSORS)</h3>
-    <br><br>
-    <h4>Hint:</h4>
-    <h5>
-        <ul>
-            <p><li>SURPRISE...!! The Game Is Played Via The Console </li></p>
-            <p><li>Open The Console By Right-Clicking On Any Part Of This Page</li></p>
-            <p><li>Navigate To The Console Tab Of The Console</li></p>
-            <p><li>WOO-DOOOOO, There You Go...!!!</li></p>
-        </ul>
-    </h5>
+    <div id="containerDiv">
 
-    <script src="index.js"></script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="gameDiv">
+
+            <div id="gameTitleDiv">
+                <h3>ROCK-PAPER-SCISSORS</h3>
+            </div>
+
+            <div id="computerRoundHumanDiv">
+                <div id="computerChoiceScoreDiv">
+                    <div id="computerTitleDiv" class="computerHuman">
+                        <h4>COMPUTER</h4>
+                    </div>
+                    <div id="computerChoiceDiv" class="compHumanChoice">
+                        <h5>COMPUTER CHOICE:</h5>
+                        <p id="computerChoiceParagraph"></p>
+                    </div>
+                    <div id="computerScoreDiv" class="compHumanScore">
+                        <h5>COMPUTER SCORE:</h5>
+                        <p id="computerScoreParagraph"></p>
+                    </div>
+                </div>
+                <div id="roundWinnerOverallButtonsDiv">
+                    <div id="roundTitleDiv">
+                        <h4>ROUND/OVERALL WINNER</h4>
+                    </div>
+                    <div id="roundWinnerDiv">
+                        <p id="roundWinnerParagraph"></p>
+                    </div>
+                    <div id="OverallWinnerDiv">
+                        <p id="overallWinnerParagraph"></p>
+                    </div>
+                    <div id="playButtonsDiv">
+                        <div id="playButtonsRockDiv" class="rockPaperScissorsButton">
+                            <button type="button" id="rockButton">ROCK</button>
+                        </div>
+                        <div id="playButtonsPaperDiv" class="rockPaperScissorsButton">
+                            <button type="submit" id="paperButton">PAPER</button>
+                        </div>
+                        <div id="playButtonsScissorsDiv" class="rockPaperScissorsButton">
+                            <button type="submit" id="scissorsButton">SCISSORS</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="humanChoiceScoreDiv">
+                    <div id="humanTitleDiv" class="computerHuman">
+                        <h4>HUMAN</h4>
+                    </div>
+                    <div id="humanChoiceDiv" class="compHumanChoice">
+                        <h5>HUMAN CHOICE:</h5>
+                        <p id="humanChoiceParagraph"></p>
+                    </div>
+                    <div id="humanScoreDiv" class="compHumanScore">
+                        <h5>HUMAN SCORE:</h5>
+                        <p id="humanScoreParagraph"></p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="hintRulesInfoDiv">
+            <div id="hintDiv">
+                <h4>HINTS:</h4>
+                <ul>
+                    <li>Start with Paper, since many people open with Rock.</li>
+                    <li>Watch if your opponent repeats moves or cycles in order.</li>
+                    <li>If they just won, they might stick with the same move.</li>
+                    <li>If they just lost, they often switch to the move that beats yours.</li>
+                    <li>Mix in randomness so you’re harder to predict.</li>
+                </ul>
+            </div>
+            <div id="rulesDiv">
+                <h4>RULES:</h4>
+                <ul>
+                    <li>Rock beats Scissors by smashing them.</li>
+                    <li>Scissors beat Paper by cutting it.</li>
+                    <li>Paper beats Rock by covering it.</li>
+                    <li>If both players choose the same move, it’s a tie.</li>
+                    <li>Players reveal their choice at the same time.</li>
+                </ul>
+            </div>
+            <div id="infoDiv">
+                <h4>INFO:</h4>
+                <ul>
+                    <li>Rock-Paper-Scissors is believed to have originated in China over 2,000 years ago.</li>
+                    <li>It’s often used as a simple decision-making tool, like flipping a coin.</li>
+                    <li>Professional Rock-Paper-Scissors tournaments actually exist worldwide.</li>
+                    <li>Strategies rely on psychology, probability, and spotting opponent patterns.</li>
+                    <li>There are fun variations like Rock-Paper-Scissors-Lizard-Spock that add more moves.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div id="sponsorTitleDiv">
+            <div id="spTitleDiv">
+                <h4>SPONSORS:</h4>
+            </div>
+            <div id="sponsorDiv">
+                <div id="sponsor1Div">
+                    <a href="http://amazon.com">
+                        <img src="amazon.png" alt="Amazon" srcset="">
+                    </a>
+                </div>
+                <div id="sponsor2Div">
+                    <a href="http://google.com">
+                        <img src="google.png" alt="Google" srcset="">
+                    </a>
+                </div>
+                <div id="sponsor3Div">
+                    <a href="http://fedex.com">
+                        <img src="fedex.png" alt="Fed EX" srcset="">
+                    </a>
+                </div>
+                <div id="sponsor4Div">
+                    <a href="http://huawei.com">
+                        <img src="huawei.png" alt="Huawei" srcset="">
+                    </a>
+                </div>
+                <div id="sponsor5Div">
+                    <a href="http://meta.com">
+                        <img src="meta.png" alt="Meta" srcset="">
+                    </a>
+                </div>
+                <div id="sponsor6Div">
+                    <a href="http://samsung.com">
+                        <img src="samsung.png" alt="Samsung" srcset="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="founderTitleDiv">
+            <div id="fTitleDiv">
+                <h4>FOUNDERS:</h4>
+            </div>
+            <div id="founderDiv">
+                <div id="founder1Div" class="founder123Div">
+                    <img src="ceo.jpg" alt="ceo" srcset="">
+                    <h4>Chief Executive Officer</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Sequi voluptas ipsum
+                        porro quis doloribus, nostrum repudiandae.
+                    </p>
+                </div>
+                <div id="founder2Div" class="founder123Div">
+                    <img src="cto.jpg" alt="cto" srcset="">
+                    <h4>Chief Technology Officer</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Sequi voluptas ipsum
+                        porro quis doloribus, nostrum repudiandae.
+                    </p>
+                </div>
+                <div id="founder3Div" class="founder123Div">
+                    <img src="cso.jpg" alt="cso" srcset="">
+                    <h4>Chief Security Officer</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur
+                        adipisicing elit. Sequi voluptas ipsum
+                        porro quis doloribus, nostrum repudiandae.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="socialTitleDiv">
+            <div id="sTitleDiv">
+                <h4>SOCIALS:</h4>
+            </div>
+            <div id="socialDiv">
+                <div id="social1Div" class="whatFaceTwitInstDiv">
+                    <a href="http://whatsapp.com">
+                        <img src="whatsapp.png" alt="whatsapp" srcset="">
+                    </a>
+                </div>
+                <div id="social2Div" class="whatFaceTwitInstDiv">
+                    <a href="http://facebook.com">
+                        <img src="facebook.png" alt="facebook" srcset="">
+                    </a>
+                </div>
+                <div id="social3Div" class="whatFaceTwitInstDiv">
+                    <a href="http://x.com">
+                        <img src="x.png" alt="twitter/x" srcset="">
+                    </a>
+                </div>
+                <div id="social4Div" class="whatFaceTwitInstDiv">
+                    <a href="http://instagram.com">
+                        <img src="instagram.png" alt="instagram" srcset="">
+                    </a>
+                </div>
+            </div>
+            <div id="copyright">
+                <p>
+                    <i class="fa fa-copyright" aria-hidden="true">copyright</i><img src="copyright.png" alt="copyright" srcset="">2025 <br>By JOHNTee...
+                </p>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
